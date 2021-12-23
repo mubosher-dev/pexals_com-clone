@@ -1,0 +1,12 @@
+.parent .card{
+    width: 100%!important;
+    height: 100%!important;
+}
+.parent .card .img-fluid{
+    width: 300px!important;
+    height: 300px!important;
+    object-fit:cover!important;
+}
+.bg{
+    background: linear-gradient(0deg,#f6f5,#f7f7f7,#f333,#f333);
+}

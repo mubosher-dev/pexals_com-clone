@@ -60,7 +60,7 @@ form.addEventListener('submit', (e) => {
 
 moreBtn.addEventListener('click', ()=> {
     pageNum++;
-    if(arr.length !== 0){
+    if(arr.length === 1){
         const moreApi = `https://api.pexels.com/v1/search?query=${arr[0]}&per_page=15&page=` + pageNum;
         getApi(moreApi);
         arr.shift();

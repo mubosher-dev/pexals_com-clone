@@ -60,6 +60,13 @@ form.addEventListener('submit', (e) => {
 
 moreBtn.addEventListener('click', ()=> {
     pageNum++;
-    const moreApi = `https://api.pexels.com/v1/curated?per_page=15&page=` + pageNum;
-    getApi(moreApi);
+    if(arr.length !== 0){
+        const moreApi = `https://api.pexels.com/v1/search?query=${arr[0]}&per_page=15&page=` + pageNum;
+        getApi(moreApi);
+        arr.shift();
+    }
+    else{
+        const apis = `https://api.pexels.com/v1/curated?per_page=15&page=` + pageNum;
+        getApi(apis);
+    }
 })
